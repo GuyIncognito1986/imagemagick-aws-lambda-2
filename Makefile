@@ -20,7 +20,7 @@ bash:
 	$(DOCKER) $(MOUNTS) --entrypoint /bin/bash -t $(DOCKER_IMAGE)
 
 all libs: 
-	$(DOCKER) $(MOUNTS) --entrypoint cp var/task/imagemagick /var/task/imagemagick
+	$(DOCKER) $(MOUNTS) --entrypoint cp -r var/task/imagemagick /var/task/imagemagick
 
 
 STACK_NAME ?= imagemagick-layer 
